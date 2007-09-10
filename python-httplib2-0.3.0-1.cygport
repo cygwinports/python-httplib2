@@ -1,0 +1,6 @@
+ORIG_PN=${PN#python-}
+inherit distutils
+
+DESCRIPTION="Python HTTP client library"
+HOMEPAGE="http://code.google.com/p/httplib2/"
+SRC_URI="http://${ORIG_PN}.googlecode.com/files/${ORIG_PN}-${PV}.tar.gz"
