@@ -4,12 +4,12 @@ A comprehensive HTTP client library for Python that supports many
 features left out of other HTTP libraries.
 
 Runtime requirements:
-  python-2.5.1-3
+  python-2.6.5-1
 
 Build requirements:
-  cygwin-1.5.24-2
-  cygport-0.3.5-1
-  python-2.5.1-3
+  cygwin-1.7.5-1
+  cygport-0.9.84-1
+  python-2.6.5-1
 
 Canonical website:
   http://code.google.com/p/httplib2/
@@ -20,33 +20,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack python-httplib2-0.3.0-X-src.tar.bz2
+  unpack python-httplib2-0.6.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./python-httplib2-0.3.0-X.cygport all
+  cygport ./python-httplib2-0.6.0-X.cygport all
 
 This will create:
-  /usr/src/python-httplib2-0.3.0-X-src.tar.bz2
-  /usr/src/python-httplib2-0.3.0-X.tar.bz2
+  /usr/src/python-httplib2-0.6.0-X-src.tar.bz2
+  /usr/src/python-httplib2-0.6.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/lib/python2.5/site-packages/httplib2-0.3.0-py2.5.egg-info
-  /usr/lib/python2.5/site-packages/httplib2/__init__.py
-  /usr/lib/python2.5/site-packages/httplib2/__init__.pyc
-  /usr/lib/python2.5/site-packages/httplib2/__init__.pyo
-  /usr/lib/python2.5/site-packages/httplib2/iri2uri.py
-  /usr/lib/python2.5/site-packages/httplib2/iri2uri.pyc
-  /usr/lib/python2.5/site-packages/httplib2/iri2uri.pyo
-  /usr/share/doc/Cygwin/python-httplib2-0.3.0.README
-  /usr/share/doc/python-httplib2-0.3.0/README
-
-------------------
-
 Port Notes:
+
+----- version 0.6.0-1 -----
+Version bump, built for Python 2.6.
 
 ----- version 0.3.0-1 -----
 Initial release for Cygwin.

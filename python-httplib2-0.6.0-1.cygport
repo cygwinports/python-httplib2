@@ -1,4 +1,3 @@
-ORIG_PN=${PN#python-}
 inherit distutils
 
 DESCRIPTION="Python HTTP client library"
