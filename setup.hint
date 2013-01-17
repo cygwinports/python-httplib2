@@ -1,5 +1,0 @@
-category: Python
-requires: python
-sdesc: "Python HTTP client library"
-ldesc: "A comprehensive HTTP client library for Python that supports many
-features left out of other HTTP libraries."

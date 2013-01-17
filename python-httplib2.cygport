@@ -1,0 +1,11 @@
+inherit distutils
+
+NAME="python-httplib2"
+VERSION=0.7.7
+RELEASE=1
+CATEGORY="Python"
+SUMMARY="Python HTTP client library"
+DESCRIPTION="A comprehensive HTTP client library for Python that supports many
+features left out of other HTTP libraries."
+HOMEPAGE="http://code.google.com/p/httplib2/"
+SRC_URI="http://${ORIG_PN}.googlecode.com/files/${ORIG_PN}-${PV}.tar.gz"
