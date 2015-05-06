@@ -1,11 +1,24 @@
-inherit distutils
+inherit python-distutils
 
 NAME="python-httplib2"
-VERSION=0.7.7
+VERSION=0.9.1
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python HTTP client library"
 DESCRIPTION="A comprehensive HTTP client library for Python that supports many
 features left out of other HTTP libraries."
-HOMEPAGE="http://code.google.com/p/httplib2/"
-SRC_URI="http://${ORIG_PN}.googlecode.com/files/${ORIG_PN}-${PV}.tar.gz"
+HOMEPAGE="https://github.com/jcgregorio/httplib2"
+SRC_URI="https://github.com/jcgregorio/httplib2/archive/v${VERSION}/httplib2-v${VERSION}.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.certfile.patch
+	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.getCertHost.patch
+	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.rfc2459.patch
+	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2-0.9-proxy-http.patch
+	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2-0.9-cve-2013-2037.patch
+"
+
+ARCH=noarch
+
+REQUIRES="ca-certificates"
+
+DISTCLEANFILES="python*/httplib2/cacerts.txt"
