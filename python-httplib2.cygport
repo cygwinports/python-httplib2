@@ -1,25 +1,23 @@
 inherit python-wheel
 
 NAME="python-httplib2"
-VERSION=0.9.2
+VERSION=0.11.3
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python HTTP client library"
 DESCRIPTION="A comprehensive HTTP client library for Python that supports many
 features left out of other HTTP libraries."
-HOMEPAGE="https://github.com/jcgregorio/httplib2"
-SRC_URI="https://github.com/jcgregorio/httplib2/archive/${VERSION}/httplib2-${VERSION}.tar.gz"
+
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.certfile.patch
-	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.getCertHost.patch
-	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2.rfc2459.patch
-	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2-0.9-proxy-http.patch
-	http://pkgs.fedoraproject.org/cgit/python-httplib2.git/plain/python-httplib2-0.9-cve-2013-2037.patch
+	https://src.fedoraproject.org/cgit/rpms/python-httplib2.git/plain/python-httplib2.certfile.patch
+	https://src.fedoraproject.org/cgit/rpms/python-httplib2.git/plain/python-httplib2.getCertHost.patch
+	https://src.fedoraproject.org/cgit/rpms/python-httplib2.git/plain/python-httplib2.rfc2459.patch
 "
 
 ARCH=noarch
 
-python2_httplib2_REQUIRES="ca-certificates"
-python3_httplib2_REQUIRES="ca-certificates"
+python27_httplib2_REQUIRES="ca-certificates"
+python36_httplib2_REQUIRES="ca-certificates"
+python37_httplib2_REQUIRES="ca-certificates"
 
 DISTCLEANFILES="python*/httplib2/cacerts.txt"
